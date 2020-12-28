@@ -1,0 +1,16 @@
+version: '3'  
+services:
+  ainterview-webrtc:
+    image: ainterview-webrtc-image
+    container_name: ainterview-webrtc-container
+    build: 
+      context: ./
+    ports:  
+      - "7003:3000"
+    volumes:
+      - /home/ubuntu/infrastructure/secrets/rsa:/lsf/rsa
+    networks:
+      - ainterview_network
+networks:
+  ainterview_network:
+     external: true
