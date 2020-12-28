@@ -6,7 +6,7 @@ services:
     build: 
       context: ./
     ports:  
-      - "7003:3000"
+      - "7003:8080"
     volumes:
       - /home/ubuntu/infrastructure/secrets/rsa:/lsf/rsa
     networks:
